@@ -1,0 +1,42 @@
+            <h1 style="text-align: center; color: #1B2845">Locker Selection</h1>
+            <form method="post">
+                <fieldset style="width: 50%; margin: auto">
+                    <div class="row" style="margin: 0">
+                        <div class="input-field col s12">
+                            <select onchange="checkOther(this);" name="wing" id="wing" required>
+                                <option value="4">Green Wing (Upstairs)</option>
+                                <option value="1">Green Wing (Downstairs)</option>
+                                <option value="7">Orange Wing (Upstairs)</option>
+                                <option value="2">Orange Wing (Downstairs)</option>
+                                <option value="5">Red Wing</option>
+                                <option value="6">Yellow Wing</option>
+                                <option value="3">The Circle (Upstairs)</option>
+                            </select>
+                            <label>Locker Location</label>
+                        </div>
+                    </div>
+                    <div class="row" id="wingsDivOut" style="margin-bottom: 0px">
+                        <div class="input-field col s12" id="wingsDivIn">
+                            <select name="wingOptions" id="wingOptions" style="margin: 0">
+                                <option value="1" selected>Front Hallway</option>
+                                <option value="2">Back Hallway</option>
+                            </select>
+                            <label>Wing Section</label>
+                        </div>
+                    </div>
+                    <div class="row" id="circleDivOut" style="margin-bottom: 0px" style="display: none; margin-bottom: 0">
+                        <div class="input-field col s12" id="circleDivIn" style="display: none">
+                            <select name="circleOptions" id="circleOptions" style="margin: 0">
+                                <option value="4" selected>Green Wing</option>
+                                <option value="7">Orange Wing</option>
+                                <option value="5">Red Wing</option>
+                                <option value="6">Yellow Wing</option>
+                            </select>
+                        </div>
+                    </div>
+                    <?php include("../templates/errors.php"); ?>
+                </fieldset>
+                <p style="text-align: center; padding-bottom: 50px;">
+                    <button class="btn waves-effect waves-light" name="action" type="submit">Claim Your Locker</button>
+                </p>
+            </form>
